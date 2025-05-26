@@ -1,0 +1,72 @@
+h1 {
+    font-size: 4em;
+    font-family:'Courier New', Courier, monospace;
+    padding-top: 1em;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: line-through;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+main, footer#footer {
+    background-color: darkgray;
+    border-radius: .5em;
+    padding-left: 2em;
+    padding-bottom: 2em;
+    padding-top: 16px;
+    margin: 1em;
+}
+
+em, strong {
+    color: gold;
+}
+
+a:link {
+    color: yellow;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    color: green;
+}
+
+a:active {
+    color: red;
+}
+
+aside, section {
+    background-color: black;
+    color: aqua;
+    border-radius: 1.5em;
+    padding: .5em;
+    margin: 1em 1em 1em 0;
+}
+
+
+
+button {
+    border-radius: .5em;
+    padding: .5em;
+    background-color: beige;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-style: none;
+}
+
+code {
+    background-color: blueviolet;
+}
+
+input {
+    padding: .4em;
+    border-style: none;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Forms</title>
+  </head>
+  <body>
+    <h1>HTML Forms</h1>
+    <!-- All stuff that belongs to forms - including submit buttons - go inside a FORM element. -->
+    <!-- 
+      There is a method attribute (GET by default). This sets how form
+      data will be submitted.
+      
+      - "get": GET forms (the default if the method attribute is not set) submit the data 
+               via the URL. This is usually used for simple search
+               forms where it doesn't matter if the data is visible in the URL. Searches are
+               not secure data so this doesn't matter. It's also useful to be able to bookmark
+               a search page. Since GET forms pass data via the URL, there is a character limit on
+               GET form data.
+      - "post": POST forms do NOT submit via the URL, so this is inherently more secure (i.e. the
+                data is not immediately exposed). Most forms should use POST as the submission
+                method. Wherever there is more sensitive data, use POST (e.g. a login form or 
+                checkout form).
+    -->
+    <!--
+      There is an action attribute. This value is the destination (URI/URL) where the form data
+      will be submitted to. As we're not doing any server-side form processing in this class, you
+      can omit this attribute for this class, but it's important to know about this attribute.
+    -->
+    <h2>Search form example</h2>
+    <form method="get">
+      <!-- It's better for accessiblity to the explicitly link the labels to their related field -->
+      <label for="q">Search: </label>
+      <input type="text" id="q" name="query" placeholder="ex. red fox">
+      <button type="submit">Search</button>
+    </form>
+
+    <h2>Login form example</h2>
+    <form method="post">
+      <div>
+        <label for="u"> Username: </label>
+        <input type="text" id="u" name="u" placeholder="johndoe">
+      </div>
+      <div>
+        <label for="pw">Password:</label>
+        <input type="password" id="pw" name="pw" placeholder="********">
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+
+    <h2>Random form example</h2>
+    <p>The following is just a form used to test out a few form fields.</p>
+    <form method="post">
+      <div>
+        <label for="num">Number of people in your household: </label>
+        <input type="number" id="num" min="1" name="num" value="1">
+      </div>
+      <div>
+        <label for="phone">Your phone number:</label>
+        <input type="tel" id="phone" name="Phone" placeholder="555-555-5555"  required >
+      </div>
+      <div>
+        <label for="email">Your email: </label>
+        <input type="email" id="email" name="email" placeholder="john@example.com">
+      </div>
+      <input type="hidden" name="myHiddenField" value="My hidden text">
+      <div>
+        <input type="checkbox" id="subscribe" name="subscribe" value="y">
+        <label for="subscribe">subscribe to our newsletter</label>
+      </div>
+      <fieldset> <!-- A fieldset is used to group related fields within a larger form.-->
+        <legend>Select the topics you're interested in: </legend>
+        <input type="checkbox" id="tech" name="interests" value="tech">
+        <label for="tech">Technology</label>
+        <input type="checkbox" id="art" name="interests" value="art">
+        <label for="art">Art</label>
+        <input type="checkbox" name="interests" id="garden" value="garden">
+        <label for="garden">Gardening</label>
+      </fieldset>
+
+      <fieldset>
+        <!-- You should give all your related radio button the same name to 
+         ensure they behave as a group. If they're given different names, they are considered unrelated and will not behave as a group -->
+        <legend>Select your age group</legend>
+        <input type="radio" id="20s" name="age" value="20s">
+        <label for="20s">20 - 29</label>
+        <input type="radio" name="age" id="30s" value="30s">
+        <label for="30s">30 - 39</label>
+      </fieldset>
+      <div>
+        <label for="">Reason for  your message: </label>
+        <select name="reason" id="reason">
+          <!-- For a dummy option, use disabled to prevent users from selecting the dummy option and use selected to ensure the dummy
+           option is chosen when the form is first loaded.  -->
+          <option value="" selected disabled>-- Select One --</option>
+          <option value="sales">Sales enquiries</option>
+          <optgroup label="Other">
+            <option value="media">Media enquiries</option>
+            <option value="legal">Legal enquiries</option>
+          </optgroup>
+        </select>
+      </div>
+      <div>
+        <label for="message">Your message:</label>
+      </div>
+      <div>
+        <!-- Any text or whitespace within the textarea opening and closing tags will be take as the default initial value of the textarea. If you want
+         your placeholder text to show you must not have any extra characters or whitespace or spaces between the opening and closing tags.  -->
+        <textarea name="message" id="message" placeholder="Your message here..." rows="8" cols="40"></textarea>
+      </div>
+      <button type="submit">Submit</button>
+      <button type="reset">Reset Form</button>
+      <button type="button">General button</button>
+    </form> 
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- THis is where you define meta-data for the document and also where you would link your CSS and/or JS. -->
+         <meta charset="utf-8"><!-- REQUIRED: Define the character set for the document.-->
+         <title>My First HTML page</title><!-- REQUIRED: This is for the tab title. -->
+    </head>
+    <body>
+        <!-- This is where all your visible content that shows INSIDE YOUR VIEWPORT WINDOW goes. -->
+         <!-- Heading level numbers (1 ... 6) have a meaning. h2 is a subheading of h1, h3 is a subheading of h2, and so on.
+         TABLE OF CONTENTS
+         ================ 
+         1. Chapter One: Basic HTML syntax
+         - 1.1.1.1 BAsic text-related tags
+         -->
+         <h1>Basic HTML</h1><!-- h1(heading level one)-->
+         <!-- In the link below #subsection-2 will jump to h2 tag with id #subsection-2 -->
+         <p>Go to <a href="#subsection-2">Section about images</a></p>
+         <p>THis is a paragraph. If you need multiple paragraphs, use multiple p elements.</p>
+         <h2>Basic text-related tags</h2>
+         <p>You can <em>italicize or emphasize text using em</em>. You can <strong>strongly emphasize text</strong> using <strong>strong</strong>.</p>
+         <p>You can create a link using the anchor (a) tag. <a href="https://humber.ca" target="_blank">Link to Humber</a></p>
+         <h2 id="subsection-2"></h2>
+         <p>Images (img) have two required attributes: <strong>src</strong> and <strong>alt</strong></p>
+         <!--
+            * src: path to the image file
+            * alt (alternate text): text that describes what's showing in the image.
+            width: the desired width of the image in px (should be a number only, no units)
+            height: the desired height of the image in px (number only)
+         -->
+        <!-- img source: https://www.google.com/imgres?q=dog&imgurl=https%3A%2F%2Fhips.hearstapps.com%2Fhmg-prod%2Fimages%2Fdog-puppy-on-garden-royalty-free-image-1586966191.jpg%3Fcrop%3D0.752xw%3A1.00xh%3B0.175xw%2C0%26resize%3D1200%3A*&imgrefurl=https%3A%2F%2Fwww.goodhousekeeping.com%2Flife%2Fpets%2Fg4531%2Fcutest-dog-breeds%2F&docid=2r6Arj4-hBjhNM&tbnid=Zcg-2Pqp8jFSiM&vet=12ahUKEwiz2IKAsI-NAxXeETQIHSKiFK8QM3oECBsQAA..i&w=1200&h=1197&hcb=2&ved=2ahUKEwiz2IKAsI-NAxXeETQIHSKiFK8QM3oECBsQAA-->
+         <img src="/download.jpeg" alt="Golden retreiver Puppy" width="400"> <!-- Self closing tag-->
+         <p><a href="/list.html">Go to list</a></p>
+         <p>&copy; Copyright HTTP5121, 2025</p>
+    </body>
+</html>
