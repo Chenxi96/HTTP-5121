@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/*************************************************************
+ * TABLE OF CONTENTS
+ * =================
+ * 1. GENERAL/DEFAULT STYLES
+ * 2. HEADER
+ * -- 2a. Site name and logo
+ * -- 2b. Navigation
+ * 3. MAIN CONTENT
+ * -- 3a. Hero
+ * -- 3b. Other sections
+ * 4. FOOTER
+ * -- 4a. Navigation
+ *************************************************************/
+
+ :root {
+    --accent: #E0376A;
+ }
+/* 1. GENERAL/DEFAULT STYLES */
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    font: normal 1em/1.2 "Open Sans", sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase;
+}
+
+.content-wrapper {
+    max-width: 1300px;
+    padding: 0 1.25em;
+    margin: 0 auto;
+}
+
+.centered {
+    text-align: center;
+}
+
+section {
+    padding: 62px 0 76px 0 !important;
+}
+/* 2. HEADER */
+#header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#header a:link,
+#header a:visited {
+    color: #000;
+    text-decoration: none;
+}
+
+/* -- 2a. Site name and logo */
+#logo-and-site-name {
+    font-size: 2em;
+    margin: 1.125em 0;
+}
+
+#logo-and-site-name a::before {
+    content: "(^._.^)";
+    color: var(--accent);
+}
+
+/* -- 2b. Navigation */
+#main-navigation {
+    font-size: 1.5em; /* 1.5em = 24px / 16px */
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase;;
+}
+
+#main-navigation a:hover {
+    color: var(--accent);
+}
+
+#main-navigation .menu {
+    gap: 1.61em;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+/* 3. MAIN CONTENT */
+
+/* -- 3a. Hero */
+.hero-text {
+    color: white;
+    background: url(/images/Black-Cat_hero.png) center center no-repeat;
+    height: 360px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.hero-text .content-wrapper {
+    width: 100%;
+}
+
+.hero-text h1 {
+    font-size: 6em;
+    text-shadow: 5px 5px 0 var(--accent);
+}
+
+/* -- 3b. Other sections */
+
+
+/* 4. FOOTER */
+
+/* -- 4a. Navigation */
